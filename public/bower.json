@@ -1,0 +1,25 @@
+{
+  "name": "ftalker",
+  "homepage": "https://github.com/FSDevelop/ftalker",
+  "authors": [
+    "Federico Sosa <federico.sosa@modelit.xyz>"
+  ],
+  "description": "Artifitial Intelligence that talks to you",
+  "main": "",
+  "keywords": [
+    "ftalker",
+    "talker",
+    "ia",
+    "intelligence",
+    "artifitial",
+    "talks"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
