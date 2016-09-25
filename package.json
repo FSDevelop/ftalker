@@ -1,0 +1,22 @@
+{
+  "name": "ftalker",
+  "version": "0.1.0",
+  "description": "FTalker is an artifitial intelligence that talks to to you",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "keywords": [
+    "ftalker",
+    "talker",
+    "robot",
+    "ia",
+    "intelligence",
+    "artifitial"
+  ],
+  "author": "Federico Sosa",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
