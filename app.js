@@ -1,27 +1,27 @@
 /**
  * Script that runs the app
- * @author  Federico Sosa (federico.sosa@modelit.xyz)
+ * @author  Federico Sosa (federico.develop@gmail.com)
  * @since   September 2016
  */
+
+// Express stuff
 var express = require('express');
 var app = express();
 
-var MongoClient = require('mongodb').MongoClient
-  , assert = require('assert');
+// Request body parser (for routes)
+var bodyParser = require('body-parser');
 
-// Connection URL
-var url = 'mongodb://localhost:27017/ftalker';
+// Using body parser
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
-// Use connect method to connect to the server
-MongoClient.connect(url, function(err, db) {
-  assert.equal(null, err);
-  console.log("Connected successfully to server");
-
-  db.close();
-});
-
+// Public folder will be `public`
 app.use(express.static('public'));
 
+// Get node routes
+require('./server/routes')(app);
+
+// Listening to port 8080
 app.listen(8080, function() {
     console.log('Listening to port 8080...');
 });

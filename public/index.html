@@ -21,10 +21,10 @@
                 </div>
             </div>
         </div>
-        <form class="form">
+        <form class="form" ng-submit="sendMessage()">
             <div class="row form-group">
                 <div class="col-lg-4 col-md-12">
-                    <textarea class="form-control" autofocus></textarea>
+                    <textarea class="form-control" autofocus ng-model="message.text"></textarea>
                 </div>
             </div>
             <div class="row form-group">
@@ -32,10 +32,11 @@
                     <button class="form-control">Send</button>
                 </div>
             </div>
-        </div>
+        </form>
     </div>
     
     <script src="bower_components/angular/angular.min.js"></script>
+    <script src="js/app.config.js"></script>
     <script src="js/main.controller.js"></script>
 </body>
 </html>

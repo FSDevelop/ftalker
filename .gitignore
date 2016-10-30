@@ -6,3 +6,7 @@ npm-debug.log
 
 # Bower components
 public/bower_components
+
+# Ignore .gitignore's
+public/.gitignore
+server/.gitignore

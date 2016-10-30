@@ -4,10 +4,19 @@
  * @since   September 2016
  */
  
-var app = angular.module('app', []);
+var Controllers = angular.module('app', []);
 
-app.controller('mainController', ['$scope', function($scope) {
-    $scope.init = function() {
-        
+Controllers.controller('mainController', ['$scope', '$http', function($scope, $http) {
+    /**
+     * Send message to server
+     */
+    $scope.sendMessage = function() {
+        $http({
+            "url": "/message",
+            "method": "POST",
+            "data": $scope.message
+        }).success(function(response) {
+            
+        });
     };
 }]);
