@@ -5,10 +5,15 @@
  */
  
 var mongo = require('./controllers/mongo.controller');
+var utils = require('./utils');
  
 module.exports = function(app) {
     app.post('/message', function(req, res) {
-        mongo.insert('message', req.body, function(result) {
+        var message = req.body;
+        
+        message.is_question = utils.isItQuestion(message.text);
+        
+        mongo.insert('message', message, function(result) {
             res.send(result);
         });
     })
