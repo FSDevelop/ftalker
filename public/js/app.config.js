@@ -3,7 +3,7 @@
  * @since October 2016
  */
 
-var app = angular.module('app', ['ngRoute', 'Controllers']);
+var app = angular.module('app', ['ngRoute']);
 
 app.config(['$routeProvider', function($routeProvider) {
     // Route exceptions

@@ -23,5 +23,18 @@ module.exports = {
           
           db.close();
         });
+    },
+    "get": function(collectionName, callback) {
+        MongoClient.connect(url, function(err, db) {
+          assert.equal(null, err);
+          
+          // Get all results from collection
+          var collection = db.collection(collectionName);
+          collection.find({}).toArray(function(err, docs) {
+              callback(docs);
+          });
+          
+          db.close();
+        });
     }
 };

@@ -6,15 +6,6 @@
  
 module.exports = {
     "isItQuestion": function(message) {
-        var questionLeads = ["what", "when", "who", "why", "?"];
-        
-        var isQuestion = false;
-        var i = 0;
-        
-        while (!isQuestion && i < questionLeads.length) {
-            isQuestion = message.toLowerCase().includes(questionLeads[i++]);
-        }
-        
-        return isQuestion;
+        return message.match(/what|when|who|why|\?/i);
     }
 };

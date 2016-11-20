@@ -1,0 +1,13 @@
+.error {
+    color: red;
+}
+
+.messages {
+    border: 1px solid #CCCCCC;
+    overflow-y: scroll;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    padding: 20px;
+    padding-bottom: 30px;
+    max-height: 250px;
+}

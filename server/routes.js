@@ -13,8 +13,20 @@ module.exports = function(app) {
         
         message.is_question = utils.isItQuestion(message.text);
         
+        // Insert message into database
         mongo.insert('message', message, function(result) {
-            res.send(result);
+            res.send({
+                "success": true,
+                "data": result
+            });
+        });
+    }),
+    app.get('/getMessages', function(req, res) {
+        mongo.get('message', function(results) {
+            res.send({
+                "success": true,
+                "data": results
+            });
         });
     })
 };
